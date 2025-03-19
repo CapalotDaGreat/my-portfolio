@@ -47,7 +47,7 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="p-4 bg-gray-900 text-white text-center">
-            <p>&copy; {new Date().getFullYear()} Cadima-Mukasa Lusiola.</p>
+            <p>&copy; {new Date().getFullYear()} Cadima-Mukasa Lusiola</p>
         </footer>
 
         </body>
