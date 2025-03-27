@@ -7,6 +7,8 @@
   --accent-dark: #a55a3c;
   --header-bg: #f4e1c6;
   --footer-bg: #f4e1c6;
+  --button-bg: #d87c5a;
+  --button-hover-bg: #a55a3c;
 }
 
 body {
@@ -20,35 +22,73 @@ header, footer {
   background: var(--header-bg);
   color: var(--foreground);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
 }
 
-nav ul li a {
+header {
+  margin-bottom: 40px;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+main {
+  padding: 20px;
+}
+
+h1, p {
+  color: var(--foreground);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-align: center;
+}
+
+p {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+button {
+  background: var(--button-bg);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+footer a {
+  text-decoration: none;
   color: var(--foreground);
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+footer a:hover {
   color: var(--accent);
 }
 
-button {
-  background: var(--accent);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background: var(--accent-dark);
-  transform: scale(1.05);
-}
-
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 header, footer, main {
