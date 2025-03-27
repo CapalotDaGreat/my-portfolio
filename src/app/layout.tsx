@@ -23,7 +23,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="de">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-warm-light text-warm-dark`}>
 
-        {/* Header */}
         <header className="p-4 bg-warm-accent text-white">
             <nav className="container mx-auto flex justify-between items-center">
                 <h1 className="text-xl font-bold">Mein Portfolio</h1>
@@ -38,10 +37,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </nav>
         </header>
 
-        {/* Hauptinhalt */}
         <main className="container mx-auto p-4">{children}</main>
 
-        {/* Footer */}
         <footer className="p-4 bg-warm-accent text-white text-center">
             <p>&copy; {new Date().getFullYear()} Cadima-Mukasa Lusiola</p>
         </footer>

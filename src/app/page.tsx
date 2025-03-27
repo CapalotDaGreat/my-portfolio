@@ -10,11 +10,11 @@ export default function Home() {
             Cadima-Mukasa Lusiola
           </h1>
           <p className="text-lg sm:text-xl font-medium text-foreground mt-4">
-            IT Student | Web Developer | Problem Solver
+            IT-Student | Web-Entwickler | Problemlöser
           </p>
 
           <p className="text-base sm:text-lg font-normal text-foreground mt-6 max-w-[800px] mx-auto">
-            Welcome to my portfolio. I am passionate about technology and building scalable, user-friendly applications. I specialize in frontend development and have experience with modern frameworks like Next.js, React, and more.
+            Willkommen auf meinem Portfolio. Ich bin leidenschaftlich an Technologie interessiert und baue skalierbare, benutzerfreundliche Anwendungen. Ich spezialisiere mich auf Frontend-Entwicklung und habe Erfahrung mit modernen Frameworks wie Next.js, React und mehr.
           </p>
 
           <div className="flex gap-4 items-center flex-col sm:flex-row mt-8">
@@ -24,7 +24,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-              Contact Me
+              Kontaktieren Sie mich
             </a>
             <a
                 className="rounded-full border border-solid border-black/[.08] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
@@ -32,7 +32,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-              View GitHub
+              GitHub ansehen
             </a>
           </div>
         </main>
@@ -47,7 +47,7 @@ export default function Home() {
             <Image
                 aria-hidden
                 src="/github.svg"
-                alt="GitHub icon"
+                alt="GitHub-Icon"
                 width={16}
                 height={16}
             />
