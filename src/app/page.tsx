@@ -3,16 +3,13 @@ import Image from "next/image";
 export default function Home() {
   return (
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 bg-warm-light text-warm-dark font-[var(--font-geist-sans)]">
-
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start text-center sm:text-left">
-
           <h1 className="text-4xl sm:text-5xl font-bold text-accent-foreground">
             Cadima-Mukasa Lusiola
           </h1>
           <p className="text-lg sm:text-xl font-medium text-foreground mt-4">
             IT-Student | Web-Entwickler | Problemlöser
           </p>
-
           <p className="text-base sm:text-lg font-normal text-foreground mt-6 max-w-[800px] mx-auto">
             Willkommen auf meinem Portfolio. Ich bin leidenschaftlich an Technologie interessiert und baue skalierbare, benutzerfreundliche Anwendungen. Ich spezialisiere mich auf Frontend-Entwicklung und habe Erfahrung mit modernen Frameworks wie Next.js, React und mehr.
           </p>

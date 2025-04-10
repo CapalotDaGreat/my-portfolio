@@ -1,3 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html.dark {
+    --background: #1e1e1e;
+    --foreground: #f2f2f2;
+    --accent: #d87c5a;
+    --accent-dark: #a55a3c;
+    --header-bg: #2e2e2e;
+    --footer-bg: #2e2e2e;
+    --button-bg: #d87c5a;
+    --button-hover-bg: #a55a3c;
+  }
+}
+
 @import "tailwindcss";
 
 :root {
