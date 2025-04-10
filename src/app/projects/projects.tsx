@@ -1,5 +1,8 @@
 "use client";
-
+export const metadata = {
+    title: "Projekte – Mein Portfolio",
+    description: "Eine Übersicht meiner Projekte.",
+};
 export default function ProjectsPage() {
     const projects = [
         {
