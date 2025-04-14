@@ -1,59 +1,88 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
-export const metadata = {
-  title: "Mein Portfolio",
-  description: "Portfolio mit Next.js",
-};
-export default function Home() {
+
+export default function HomePage() {
   return (
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 bg-warm-light text-warm-dark font-[var(--font-geist-sans)]">
-        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start text-center sm:text-left">
-          <h1 className="text-4xl sm:text-5xl font-bold text-accent-foreground">
-            Cadima-Mukasa Lusiola
-          </h1>
-          <p className="text-lg sm:text-xl font-medium text-foreground mt-4">
-            IT-Student | Web-Entwickler | Problemlöser
-          </p>
-          <p className="text-base sm:text-lg font-normal text-foreground mt-6 max-w-[800px] mx-auto">
-            Willkommen auf meinem Portfolio. Ich bin leidenschaftlich an Technologie interessiert und baue skalierbare, benutzerfreundliche Anwendungen. Ich spezialisiere mich auf Frontend-Entwicklung und habe Erfahrung mit modernen Frameworks wie Next.js, React und mehr.
-          </p>
+      <div className="home-container">
+        <style jsx>{`
+        .home-container {
+          text-align: center;
+          padding: 2rem;
+        }
 
-          <div className="flex gap-4 items-center flex-col sm:flex-row mt-8">
-            <a
-                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-                href="mailto:cadima.lusiola@student.ksh.ch"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Kontaktieren Sie mich
-            </a>
-            <a
-                className="rounded-full border border-solid border-black/[.08] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-                href="https://github.com/CapalotDaGreat"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              GitHub ansehen
-            </a>
-          </div>
-        </main>
+        .hero {
+          margin-bottom: 3rem;
+        }
 
-        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center mt-12">
+        h1 {
+          font-size: 3rem;
+          color: var(--primary-color);
+          margin-bottom: 1rem;
+        }
+
+        .subtitle {
+          font-size: 1.5rem;
+          color: var(--text-color);
+          opacity: 0.8;
+          margin-bottom: 2rem;
+        }
+
+        .cta-button {
+          display: inline-block;
+          background-color: var(--primary-color);
+          color: white;
+          padding: 1rem 2rem;
+          border-radius: 8px;
+          text-decoration: none;
+          transition: background-color 0.3s;
+          margin: 0.5rem;
+        }
+
+        .cta-button:hover {
+          background-color: var(--secondary-color);
+        }
+
+        .github-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: var(--text-color);
+          text-decoration: none;
+          margin-top: 2rem;
+          padding: 0.5rem 1rem;
+          border: 1px solid var(--text-color);
+          border-radius: 8px;
+          transition: all 0.3s;
+        }
+
+        .github-link:hover {
+          background-color: var(--text-color);
+          color: var(--background-color);
+        }
+      `}</style>
+
+        <div className="hero">
+          <h1>Willkommen auf meinem Portfolio</h1>
+          <p className="subtitle">
+            Ich bin ein leidenschaftlicher Entwickler, der moderne und benutzerfreundliche Webanwendungen erstellt.
+          </p>
+          <a href="/projects" className="cta-button">
+            Meine Projekte ansehen
+          </a>
           <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
               href="https://github.com/CapalotDaGreat"
               target="_blank"
               rel="noopener noreferrer"
+              className="github-link"
           >
-            <Image
-                aria-hidden
-                src="/github.svg"
-                alt="GitHub-Icon"
-                width={16}
-                height={16}
-            />
-            GitHub
+            <svg height="24" viewBox="0 0 16 16" width="24" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+            GitHub Profil
           </a>
-        </footer>
+        </div>
       </div>
   );
 }

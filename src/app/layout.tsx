@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     const [darkMode, setDarkMode] = useState(false);
@@ -21,30 +20,66 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     return (
         <html lang="de">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-warm-light text-warm-dark transition-colors duration-300`}>
-        <header className="p-4 bg-warm-accent text-white">
-            <nav className="container mx-auto flex justify-between items-center">
-                <h1 className="text-xl font-bold">Mein Portfolio</h1>
-                <ul className="flex gap-4">
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/projects">Projekte</Link></li>
-                    <li><Link href="/about">Über mich</Link></li>
-                    <li><Link href="/contact">Kontakt</Link></li>
-                    <li><Link href="/impressum">Impressum</Link></li>
-                    <li><Link href="/datenschutz">Datenschutz</Link></li>
+        <head>
+            <style jsx global>{`
+                .nav-link {
+                    color: var(--header-text);
+                    text-decoration: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    transition: background-color 0.3s;
+                }
+
+                .nav-link:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+
+                .theme-toggle {
+                    background-color: var(--card-bg);
+                    color: var(--text-color);
+                    border: 1px solid var(--text-color);
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                }
+
+                .theme-toggle:hover {
+                    background-color: var(--text-color);
+                    color: var(--background-color);
+                }
+
+                main {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 2rem;
+                }
+            `}</style>
+        </head>
+        <body className={inter.className}>
+        <header>
+            <nav className="container">
+                <h1>Mein Portfolio</h1>
+                <ul>
+                    <li><Link href="/" className="nav-link">Home</Link></li>
+                    <li><Link href="/projects" className="nav-link">Projekte</Link></li>
+                    <li><Link href="/about" className="nav-link">Über mich</Link></li>
+                    <li><Link href="/contact" className="nav-link">Kontakt</Link></li>
+                    <li><Link href="/impressum" className="nav-link">Impressum</Link></li>
+                    <li><Link href="/datenschutz" className="nav-link">Datenschutz</Link></li>
                 </ul>
                 <button
                     onClick={() => setDarkMode(!darkMode)}
-                    className="ml-4 px-3 py-1 border rounded text-sm bg-white text-black hover:bg-gray-200"
+                    className="theme-toggle"
                 >
                     {darkMode ? "☀️ Hell" : "🌙 Dunkel"}
                 </button>
             </nav>
         </header>
 
-        <main className="container mx-auto p-4">{children}</main>
+        <main>{children}</main>
 
-        <footer className="p-4 bg-warm-accent text-white text-center">
+        <footer>
             <p>&copy; {new Date().getFullYear()} Cadima-Mukasa Lusiola</p>
         </footer>
         </body>
