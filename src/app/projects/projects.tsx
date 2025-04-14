@@ -1,10 +1,16 @@
 "use client";
-export const metadata = {
-    title: "Projekte – Mein Portfolio",
-    description: "Eine Übersicht meiner Projekte.",
-};
+
+import React from "react";
+import { motion } from "framer-motion";
+
+interface Project {
+    title: string;
+    description: string;
+    link: string;
+}
+
 export default function ProjectsPage() {
-    const projects = [
+    const projects: Project[] = [
         {
             title: "Portfolio-Website",
             description: "Mein persönliches Portfolio mit Next.js und Tailwind CSS.",
@@ -22,20 +28,80 @@ export default function ProjectsPage() {
         },
     ];
 
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 }
+    };
+
     return (
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4">
+        <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="projects-grid"
+        >
+            <style jsx>{`
+                .projects-grid {
+                    display: grid;
+                    gap: 2rem;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    padding: 2rem;
+                }
+
+                .project-card {
+                    background-color: var(--card-bg);
+                    color: var(--text-color);
+                    border-radius: 8px;
+                    padding: 1.5rem;
+                    box-shadow: 0 4px 6px var(--card-shadow);
+                    transition: all 0.3s;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                .project-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 16px var(--card-shadow);
+                }
+
+                .project-title {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                    color: var(--primary-color);
+                }
+
+                .project-description {
+                    font-size: 0.875rem;
+                    color: var(--text-color);
+                    opacity: 0.8;
+                }
+            `}</style>
             {projects.map((project, index) => (
-                <a
+                <motion.a
                     key={index}
+                    variants={item}
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white dark:bg-zinc-800 text-black dark:text-white rounded-2xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
+                    className="project-card"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
                 >
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-sm">{project.description}</p>
-                </a>
+                    <h3 className="project-title">{project.title}</h3>
+                    <p className="project-description">{project.description}</p>
+                </motion.a>
             ))}
-        </div>
+        </motion.div>
     );
 }
