@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Cadima Lusiola - Web Developer Portfolio" />
             <link rel="icon" href="/favicon.ico" />
-            <title>Cadima Lusiola | Web Developer</title>
+            <title>Cadima Lusiola | Applikationsentwickler</title>
         </head>
         <body className={inter.className}>
         <header className="sticky top-0 bg-surface z-50 border-b border-border-color shadow-sm">
@@ -46,10 +46,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 <nav className="flex items-center gap-4">
                     <Link href="/" className="nav-link">Home</Link>
-                    <Link href="/projects" className="nav-link">Projekte</Link>
                     <Link href="/about" className="nav-link">Über mich</Link>
-                    <Link href="/contact" className="nav-link">Kontakt</Link>
-                    <Link href="/datenschutz" className="nav-link">Datenschutz</Link>
+                    <Link href="/projects" className="nav-link">Projekte</Link>
                 </nav>
 
                 <button
