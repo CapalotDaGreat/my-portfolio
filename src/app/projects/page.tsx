@@ -160,7 +160,7 @@ export default function ProjectsPage() {
                         Nehmen Sie bitte Kontakt mit mir auf!
                     </p>
                     <motion.a
-                        href="mailto:cadima.lusiola@student.ksh.ch"
+                        href="mailto:clusiola4@gmail.com"
                         className="button inline-flex items-center gap-2"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}

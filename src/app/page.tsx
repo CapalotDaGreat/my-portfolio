@@ -29,7 +29,7 @@ export default function HomePage() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                         <span className="block text-primary-color">Cadima Lusiola</span>
-                        <span className="mt-4 block">Applikationsentwickler</span>
+                        <span className="mt-4 block">ApplikationsEntwickler</span>
                     </motion.h1>
 
                     <motion.div
@@ -74,11 +74,11 @@ export default function HomePage() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
                 >
-                    <a href="mailto:cadima.lusiola@student.ksh.ch" className="text-primary-color hover:underline inline-flex items-center gap-2">
+                    <a href="mailto:clusiola4@gmail.com" className="text-primary-color hover:underline inline-flex items-center gap-2">
                         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.5 18 14.8571 12M9.14286 12 2.5 18M2 7l8.1649 5.7154a2.4 2.4 0 0 0 3.6702 0L22 7M6.8 20h10.4c1.6802 0 2.5202 0 3.162-.327a3 3 0 0 0 1.311-1.311c.327-.6418.327-1.4818.327-3.162V8.8c0-1.6802 0-2.5202-.327-3.162a3 3 0 0 0-1.311-1.311C19.7202 4 18.8802 4 17.2 4H6.8c-1.6802 0-2.5202 0-3.162.327a3 3 0 0 0-1.311 1.311C2 6.2798 2 7.1198 2 8.8v6.4c0 1.6802 0 2.5202.327 3.162a3 3 0 0 0 1.311 1.311C4.2798 20 5.1198 20 6.8 20Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
                         </svg>
-                        cadima.lusiola@student.ksh.ch
+                        clusiola4@gmail.com
                     </a>
                 </motion.div>
             </div>
