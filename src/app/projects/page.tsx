@@ -7,28 +7,12 @@ import { motion } from "framer-motion";
 export default function ProjectsPage() {
     const projects = [
         {
-            title: "Portfolio-Website",
-            description: "Responsive Portfolio mit Next.js, framer-motion und fortschrittlichem Theme-Management.",
-            tags: ["Next.js", "React", "CSS", "Framer Motion"],
-            type: "Frontend",
-            link: "#",
-            githubLink: "https://github.com/CapalotDaGreat/my-portfolio"
-        },
-        {
             title: "Konkursfälle der Schweiz Webseite",
             description: "Eine Webseite, die Informationen über Konkursfälle in der Schweiz bereitstellt.",
             tags: ["Javascript", "HTML", "CSS"],
             type: "Backend",
             link: "#",
             githubLink: "https://github.com/im23b-mahfuzr/PrWr_Projekt"
-        },
-        {
-            title: "Task Management API",
-            description: "RESTful API mit Express und PostgreSQL für ein Aufgabenverwaltungssystem.",
-            tags: ["Node.js", "Express", "PostgreSQL", "REST"],
-            type: "Backend",
-            link: "#",
-            githubLink: "#"
         },
         {
             title: "Smart Taschenrechner",
@@ -180,6 +164,8 @@ export default function ProjectsPage() {
                     grid-template-columns: repeat(1, 1fr);
                     gap: 2rem;
                     width: 100%;
+                    max-width: 1100px;
+                    margin: 0 auto;
                 }
 
                 @media (min-width: 640px) {
@@ -190,7 +176,7 @@ export default function ProjectsPage() {
 
                 @media (min-width: 1024px) {
                     .projects-grid {
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-columns: repeat(2, 1fr);
                     }
                 }
 
@@ -230,7 +216,7 @@ export default function ProjectsPage() {
                 }
 
                 .project-inner {
-                    padding: 1.5rem;
+                    padding: 1.75rem;
                     display: flex;
                     flex-direction: column;
                     height: 100%;
@@ -258,6 +244,8 @@ export default function ProjectsPage() {
                 .project-description {
                     color: var(--text-secondary);
                     margin-bottom: 1.5rem;
+                    line-height: 1.7;
+                    font-size: 0.975rem;
                     flex-grow: 1;
                 }
 
