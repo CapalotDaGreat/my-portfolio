@@ -14,41 +14,28 @@ interface Project {
 export default function ProjectsPage() {
     const projects: Project[] = [
         {
-            title: "Portfolio-Website",
-            description: "Mein persönliches Portfolio mit Next.js und Tailwind CSS.",
-            link: "https://github.com/CapalotDaGreat",
-            tags: ["Next.js", "React", "CSS"],
-            imageUrl: "/images/portfolio.jpg"
+            title: "Konkursfälle der Schweiz Webseite",
+            description: "Eine Webseite, die Informationen über Konkursfälle in der Schweiz bereitstellt.",
+            link: "https://github.com/im23b-mahfuzr/PrWr_Projekt",
+            tags: ["Javascript", "HTML", "CSS"],
         },
         {
-            title: "Quiz-App",
-            description: "Interaktive Quiz-Anwendung mit JavaScript für Bildungszwecke.",
-            link: "#",
-            tags: ["JavaScript", "HTML", "CSS"],
+            title: "Smart Taschenrechner",
+            description: "Ein Taschenrechner, der nicht nur die Grundrechenarten beherrscht, sondern auch komplexe mathematische Operationen durchführen kann.",
+            link: "https://taschenrechner-pesv.vercel.app/",
+            tags: ["Javascript", "HTML", "CSS"],
         },
         {
-            title: "Rechner",
-            description: "Ein moderner Rechner mit OOP in JavaScript, der komplexe Berechnungen durchführen kann.",
-            link: "#",
-            tags: ["JavaScript", "OOP", "Design"],
+            title: "Mensa-App",
+            description: "Eine Web-App, die die Mensa-Speiseplan für die Mensa-BZZ anzeigt.",
+            link: "https://mensa-app-nine.vercel.app/",
+            tags: ["HTML5", "CSS", "JavaScript"],
         },
         {
-            title: "Wetter-App",
-            description: "Eine Anwendung, die Wetterinformationen für verschiedene Standorte anzeigt.",
-            link: "#",
-            tags: ["API", "React", "CSS"],
-        },
-        {
-            title: "To-Do Liste",
-            description: "Eine einfache, aber effektive To-Do-Liste-Anwendung mit Drag-and-Drop-Funktionalität.",
-            link: "#",
-            tags: ["React", "State Management", "UI/UX"],
-        },
-        {
-            title: "Musik-Player",
-            description: "Ein moderner Musik-Player mit anpassbaren Playlists und Visualisierungen.",
-            link: "#",
-            tags: ["HTML5", "Audio API", "CSS"],
+            title: "Budget-Tracker",
+            description: "Ein Budget-Tracker, der Ihnen hilft, Ihr Geld besser zu verwalten.",
+            link: "https://budget-tracker-chi-one.vercel.app/",
+            tags: ["JavaScript", "CSS", "HTML"],
         },
     ];
 
