@@ -35,23 +35,23 @@ export default function ProjectsPage() {
             description: "Ein Taschenrechner, der nicht nur die Grundrechenarten beherrscht, sondern auch komplexe mathematische Operationen durchführen kann.",
             tags: ["Javascript", "HTML", "CSS"],
             type: "Frontend",
-            link: "#",
+            link: "https://taschenrechner-pesv.vercel.app/",
             githubLink: "https://github.com/CapalotDaGreat/Taschenrechner"
         },
         {
-            title: "Content Management System",
-            description: "Benutzerdefiniertes CMS mit Admin-Panel, Medien-Bibliothek und dynamischer Inhaltsbearbeitung.",
-            tags: ["Next.js", "Node.js", "MongoDB", "AWS S3"],
+            title: "Mensa-App",
+            description: "Eine Web-App, die die Mensa-Speiseplan für die Mensa-BZZ anzeigt.",
+            tags: ["HTML5", "CSS", "JavaScript"],
             type: "Fullstack",
-            link: "#",
-            githubLink: "#"
+            link: "https://mensa-app-nine.vercel.app/",
+            githubLink: "https://github.com/im23b-busere/Mensa-App"
         },
         {
             title: "Budget-Tracker",
             description: "Ein Budget-Tracker, der Ihnen hilft, Ihr Geld besser zu verwalten.",
             tags: ["JavaScript", "CSS", "HTML"],
             type: "Frontend",
-            link: "#",
+            link: "https://budget-tracker-chi-one.vercel.app/",
             githubLink: "https://github.com/CapalotDaGreat/Budget-Tracker"
         },
     ];
