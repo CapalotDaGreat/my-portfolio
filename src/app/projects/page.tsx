@@ -11,7 +11,7 @@ export default function ProjectsPage() {
             description: "Eine Webseite, die Informationen über Konkursfälle in der Schweiz bereitstellt.",
             tags: ["Javascript", "HTML", "CSS"],
             type: "Backend",
-            link: "#",
+            link: "https://konkursfaelle.vercel.app/",
             githubLink: "https://github.com/im23b-mahfuzr/PrWr_Projekt"
         },
         {
