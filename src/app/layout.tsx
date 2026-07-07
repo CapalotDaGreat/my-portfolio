@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import PageTransition from "../components/PageTransition";
+import AgentationDev from "../components/AgentationDev";
 
 export const metadata: Metadata = {
   title: {
@@ -34,6 +35,7 @@ export default function RootLayout({
           <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
+        <AgentationDev />
       </body>
     </html>
   );

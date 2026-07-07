@@ -107,10 +107,16 @@ a {
   transition: 0.2s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
   color: var(--text);
   background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-links a.active {
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(91, 109, 255, 0.35), rgba(125, 92, 255, 0.28));
+  box-shadow: inset 0 0 0 1px rgba(124, 140, 255, 0.45);
 }
 
 .nav-cta {
@@ -168,9 +174,34 @@ a {
   gap: 4rem;
 }
 
+.one-page {
+  gap: 5rem;
+}
+
+.page-section {
+  scroll-margin-top: 92px;
+}
+
+.section-intro {
+  max-width: 720px;
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  margin: 0;
+}
+
+.subsection {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
 .hero-panel,
 .section-panel,
-.cta-panel {
+.cta-panel,
+.contact-panel {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -459,6 +490,71 @@ p {
   text-align: center;
 }
 
+.contact-panel {
+  padding: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-header {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.contact-header .lead {
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  text-align: left;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-card:hover {
+  border-color: rgba(124, 140, 255, 0.45);
+  transform: translateY(-2px);
+}
+
+.contact-card-label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-card-value {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.contact-card-hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -520,6 +616,10 @@ p {
   .section-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 

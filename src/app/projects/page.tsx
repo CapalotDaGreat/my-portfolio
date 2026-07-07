@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
-import ProjectsPage from "./projects";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Projekte",
-  description:
-    "Ausgewaehlte GitHub-Projekte von Cadima Lusiola mit Live-Demos, Tech-Stack und Ergebnissen.",
-};
-
-export default function Page() {
-  return <ProjectsPage />;
+export default function ProjectsPage() {
+  redirect("/#projects");
 }

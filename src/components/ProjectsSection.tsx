@@ -2,16 +2,16 @@
 
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
-import ProjectCard from "../../components/ProjectCard";
+import ProjectCard from "./ProjectCard";
 import {
   categoryLabels,
   projects,
   type ProjectCategory,
-} from "../../data/projects";
+} from "../data/projects";
 
 type FilterValue = "all" | ProjectCategory;
 
-export default function ProjectsPage() {
+export default function ProjectsSection() {
   const [filter, setFilter] = useState<FilterValue>("all");
 
   const filteredProjects = useMemo(() => {
@@ -28,44 +28,41 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <div className="site-root">
-      <section className="hero-panel">
-        <p className="eyebrow">GitHub Portfolio</p>
-        <h1>Meine besten Projekte aus dem echten Code</h1>
-        <p className="lead">
-          Ausgewaehlte Repositories von{" "}
+    <>
+      <div className="section-head">
+        <h2>Projekte</h2>
+        <p className="section-subtitle">
+          Ausgewählte Repositories von{" "}
           <a href="https://github.com/CapalotDaGreat" target="_blank" rel="noreferrer">
             github.com/CapalotDaGreat
           </a>
-          , priorisiert nach technischer Relevanz, Live-Demos und Produktdenken.
         </p>
-      </section>
+      </div>
 
-      <section className="section">
-        <div className="filter-bar">
-          {filters.map((item) => (
-            <button
-              key={item.value}
-              type="button"
-              className={`filter-button ${filter === item.value ? "active" : ""}`}
-              onClick={() => setFilter(item.value)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-      </section>
+      <div className="filter-bar">
+        {filters.map((item) => (
+          <button
+            key={item.value}
+            type="button"
+            className={`filter-button ${filter === item.value ? "active" : ""}`}
+            onClick={() => setFilter(item.value)}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
 
       <motion.div
         className="grid two"
         initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.35 }}
       >
         {filteredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </motion.div>
-    </div>
+    </>
   );
 }

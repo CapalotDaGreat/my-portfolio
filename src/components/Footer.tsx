@@ -10,8 +10,16 @@ export default function Footer() {
           <a href="https://github.com/CapalotDaGreat" target="_blank" rel="noreferrer">
             GitHub
           </a>
+          <a
+            href="https://www.linkedin.com/in/cadima-lusiola-392833380/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
           <a href="mailto:clusiola4@gmail.com">Email</a>
-          <a href="/projects">Projekte</a>
+          <a href="/#projects">Projekte</a>
+          <a href="/#contact">Kontakt</a>
         </div>
         <p className="footer-meta">© {new Date().getFullYear()} Cadima Lusiola</p>
       </div>
