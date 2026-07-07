@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import "./globals.css";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import PageTransition from "../components/PageTransition";
 
 export const metadata: Metadata = {
   title: {
-    default: "Mahfuz Rahman | Full-Stack Developer",
-    template: "%s | Mahfuz Rahman",
+    default: "Cadima Lusiola | Full-Stack Developer",
+    template: "%s | Cadima Lusiola",
   },
   description:
-    "Portfolio von Mahfuz Rahman mit Fokus auf performante, barrierearme und moderne Webanwendungen.",
+    "Portfolio von Cadima Lusiola mit modernen Web-Apps, klaren UI-Konzepten und echten GitHub-Projekten.",
   keywords: [
-    "Mahfuz Rahman",
+    "Cadima Lusiola",
     "Full-Stack Developer",
-    "Frontend Engineer",
     "React",
     "Next.js",
     "TypeScript",
+    "Portfolio",
   ],
 };
 
@@ -28,34 +29,11 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body>
-        <header className="site-header">
-          <div className="container shell">
-            <Link href="/" className="brand">
-              Mahfuz Rahman
-            </Link>
-            <nav className="nav">
-              <Link href="/">Start</Link>
-              <Link href="/projects">Projekte</Link>
-              <a href="/#contact">Kontakt</a>
-            </nav>
-          </div>
-        </header>
-
+        <Navbar />
         <main className="container main-content">
           <PageTransition>{children}</PageTransition>
         </main>
-
-        <footer className="site-footer">
-          <div className="container shell footer-shell">
-            <p>© {new Date().getFullYear()} Mahfuz Rahman. Alle Rechte vorbehalten.</p>
-            <div className="footer-links">
-              <a href="https://github.com/CapalotDaGreat" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-              <a href="mailto:clusiola4@gmail.com">Email</a>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );

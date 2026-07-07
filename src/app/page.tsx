@@ -1,163 +1,173 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+import ProjectCard from "../components/ProjectCard";
+import { featuredProjects } from "../data/projects";
 
-const featuredProjects = [
-  {
-    title: "Konkursfaelle der Schweiz",
-    description:
-      "Informationsplattform mit klarem Datenzugriff und nutzerfreundlichem UI fuer komplexe Inhalte.",
-    stack: ["JavaScript", "HTML", "CSS"],
-    impact: "Strukturierte komplexe Informationen fuer schnelle Entscheidungen.",
-    url: "https://github.com/im23b-mahfuzr/PrWr_Projekt",
-  },
-  {
-    title: "Smart Taschenrechner",
-    description:
-      "Modular aufgebauter Rechner mit sauberer Logiktrennung und Fokus auf gute Bedienbarkeit.",
-    stack: ["JavaScript", "HTML", "CSS"],
-    impact: "Stabile Architektur fuer Erweiterungen und bessere Wartbarkeit.",
-    url: "https://github.com/CapalotDaGreat/Taschenrechner",
-  },
-  {
-    title: "Budget Tracker",
-    description:
-      "Persoenliches Finanztool mit klaren Uebersichten zur besseren Steuerung von Ausgaben.",
-    stack: ["JavaScript", "HTML", "CSS"],
-    impact: "Bessere Transparenz ueber Budget und wiederkehrende Ausgaben.",
-    url: "https://github.com/CapalotDaGreat/Budget-Tracker",
-  },
-];
-
-const coreSkills = [
+const skills = [
   "React / Next.js",
   "TypeScript / JavaScript",
-  "Node.js Basics",
-  "Responsive UI Engineering",
-  "Performance Thinking",
-  "Clean Code & Maintainability",
+  "UI Engineering",
+  "Responsive Design",
+  "API Integration",
+  "Clean Code",
+];
+
+const values = [
+  {
+    title: "Produktfokus",
+    text: "Ich entwickle Features mit Blick auf Nutzen, Klarheit und messbaren Mehrwert.",
+  },
+  {
+    title: "Saubere Umsetzung",
+    text: "Strukturierter Code, gute Lesbarkeit und wartbare Architektur stehen im Zentrum.",
+  },
+  {
+    title: "Schnelles Lernen",
+    text: "Neue Tools und Feedback setze ich zuegig um und liefere zuverlaessig Ergebnisse.",
+  },
 ];
 
 export default function Home() {
   return (
     <div className="site-root">
-      <section className="hero">
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="hero-kicker">
-          Verfuegbar fuer Junior / Entry-Level Rollen
+      <section className="hero-panel hero-with-profile">
+        <div className="hero-content">
+        <motion.p
+          className="eyebrow"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Offen fuer Junior / Entry-Level Positionen
         </motion.p>
         <motion.h1
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45 }}
+          transition={{ delay: 0.05 }}
         >
-          Ich baue moderne Webprodukte, die schnell, klar und nutzerfreundlich sind.
+          Cadima Lusiola baut digitale Produkte, die man sofort versteht.
         </motion.h1>
         <motion.p
-          className="hero-copy"
-          initial={{ opacity: 0, y: 12 }}
+          className="lead"
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.1 }}
+          transition={{ delay: 0.12 }}
         >
-          Ich bin Mahfuz Rahman, Full-Stack Developer mit Fokus auf React, Next.js und
-          TypeScript. Mein Ziel: messbaren Produktwert liefern und in einem starken Team schnell
-          wachsen.
+          Full-Stack Developer mit Fokus auf React, Next.js und TypeScript. Ich verbinde
+          moderne Interfaces mit sauberer Logik und echten Projekten aus meinem GitHub-Profil.
         </motion.p>
+
         <motion.div
           className="hero-actions"
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.2 }}
+          transition={{ delay: 0.18 }}
         >
-          <a className="button primary" href="/projects">
-            Projekte ansehen
-          </a>
-          <a className="button ghost" href="#contact">
-            Kontakt
+          <Link href="/projects" className="button primary">
+            GitHub Projekte ansehen
+          </Link>
+          <a href="#contact" className="button ghost">
+            Kontakt aufnehmen
           </a>
         </motion.div>
-        <div className="socials">
-          <a href="https://github.com/CapalotDaGreat" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <FaGithub />
-          </a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <FaLinkedin />
-          </a>
-          <a href="mailto:clusiola4@gmail.com" aria-label="E-Mail">
-            <FaEnvelope />
-          </a>
-        </div>
-      </section>
 
-      <section className="section">
-        <h2>Warum ich ein guter Hire bin</h2>
-        <div className="grid three">
-          <article className="card">
-            <h3>Business Fokus</h3>
-            <p>
-              Ich denke nicht nur in Features, sondern in Ergebnissen: schnellere Ablaufe,
-              klarere Interfaces und bessere Nutzererfahrung.
-            </p>
-          </article>
-          <article className="card">
-            <h3>Sauberer Code</h3>
-            <p>
-              Ich arbeite strukturiert, schreibe wartbaren Code und beachte Performance sowie
-              Accessibility frueh im Prozess.
-            </p>
-          </article>
-          <article className="card">
-            <h3>Team Mentalitaet</h3>
-            <p>
-              Ich kommuniziere aktiv, nehme Feedback schnell auf und setze Verbesserungen
-              zuverlaessig um.
-            </p>
-          </article>
+        <div className="stats-row grid four">
+          <div className="stat-card">
+            <strong>8+</strong>
+            <span>GitHub Projekte</span>
+          </div>
+          <div className="stat-card">
+            <strong>3</strong>
+            <span>Live Demos</span>
+          </div>
+          <div className="stat-card">
+            <strong>TS / JS</strong>
+            <span>Kern-Stack</span>
+          </div>
+          <div className="stat-card">
+            <strong>100%</strong>
+            <span>Eigenentwicklung</span>
+          </div>
         </div>
-      </section>
+        </div>
 
-      <section className="section">
-        <h2>Core Skills</h2>
-        <ul className="skill-list">
-          {coreSkills.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
+        <motion.div
+          className="hero-profile"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <Image
+            src="/images/profile-cadima.png"
+            alt="Cadima Lusiola"
+            width={320}
+            height={320}
+            className="profile-image"
+            priority
+          />
+        </motion.div>
       </section>
 
       <section className="section">
         <div className="section-head">
-          <h2>Ausgewaehlte Projekte</h2>
-          <a href="/projects">Alle Projekte</a>
+          <h2>Warum Teams mit mir arbeiten sollten</h2>
         </div>
         <div className="grid three">
-          {featuredProjects.map((project) => (
-            <article className="card" key={project.title}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <p className="impact">{project.impact}</p>
-              <div className="chips">
-                {project.stack.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
-              <a href={project.url} target="_blank" rel="noreferrer">
-                GitHub ansehen
-              </a>
+          {values.map((value) => (
+            <article className="value-card" key={value.title}>
+              <h3>{value.title}</h3>
+              <p>{value.text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section contact" id="contact">
-        <h2>Kontakt</h2>
-        <p>
-          Wenn ihr Team einen motivierten Developer sucht, der Verantwortung uebernimmt und schnell
-          lernt, freue ich mich auf ein Gespraech.
+      <section className="section">
+        <div className="section-head">
+          <h2>Top GitHub Projekte</h2>
+          <Link href="/projects">Alle anzeigen</Link>
+        </div>
+        <div className="grid three">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} compact />
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-head">
+          <h2>Tech Stack</h2>
+        </div>
+        <div className="grid three">
+          {skills.map((skill) => (
+            <article className="skill-card" key={skill}>
+              <h3>{skill}</h3>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="cta-panel" id="contact">
+        <h2>Bereit fuer den naechsten Schritt?</h2>
+        <p className="lead">
+          Wenn Sie einen motivierten Developer suchen, der Verantwortung uebernimmt und mit
+          echten Projekten ueberzeugt, freue ich mich auf Ihre Nachricht.
         </p>
-        <a className="button primary" href="mailto:clusiola4@gmail.com">
-          clusiola4@gmail.com
-        </a>
+        <div className="hero-actions" style={{ justifyContent: "center" }}>
+          <a className="button primary" href="mailto:clusiola4@gmail.com">
+            clusiola4@gmail.com
+          </a>
+          <a
+            className="button ghost"
+            href="https://github.com/CapalotDaGreat"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub Profil
+          </a>
+        </div>
       </section>
     </div>
   );
