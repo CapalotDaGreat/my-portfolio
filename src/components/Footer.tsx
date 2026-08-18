@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <div>
           <p className="footer-title">Cadima Lusiola</p>
-          <p className="footer-copy">Full-Stack Developer · Web Apps · UI Engineering</p>
+          <p className="footer-copy">Junior Full-Stack Developer · Zürich</p>
         </div>
         <div className="footer-links">
           <a href="https://github.com/CapalotDaGreat" target="_blank" rel="noreferrer">
@@ -17,8 +17,7 @@ export default function Footer() {
           >
             LinkedIn
           </a>
-          <a href="mailto:clusiola4@gmail.com">Email</a>
-          <a href="/#projects">Projekte</a>
+          <a href="mailto:clusiola4@gmail.com">E-Mail</a>
           <a href="/#contact">Kontakt</a>
         </div>
         <p className="footer-meta">© {new Date().getFullYear()} Cadima Lusiola</p>

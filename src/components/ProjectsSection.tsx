@@ -32,9 +32,9 @@ export default function ProjectsSection() {
       <div className="section-head">
         <h2>Projekte</h2>
         <p className="section-subtitle">
-          Ausgewählte Repositories von{" "}
+          Ausgewählte Web-Apps, Tools und Backend-Projekte.{" "}
           <a href="https://github.com/CapalotDaGreat" target="_blank" rel="noreferrer">
-            github.com/CapalotDaGreat
+            GitHub-Profil
           </a>
         </p>
       </div>

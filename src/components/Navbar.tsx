@@ -86,7 +86,7 @@ export default function Navbar() {
           <span />
         </button>
 
-        <nav className={`nav-links ${open ? "open" : ""}`}>
+        <nav className={`nav-links ${open ? "open" : ""}`} aria-label="Hauptnavigation">
           {links.map((link) => (
             <Link
               key={link.id}

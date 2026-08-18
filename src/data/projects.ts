@@ -1,4 +1,4 @@
-export type ProjectCategory = "web" | "tool" | "game" | "backend";
+export type ProjectCategory = "web" | "tool" | "backend";
 
 export type Project = {
   id: string;
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     id: "my-portfolio",
     title: "Portfolio Website",
-    summary: "Moderne Next.js Portfolio-Seite mit Fokus auf Performance und klare Projektdarstellung.",
+    summary: "Persönliches Portfolio mit App Router, TypeScript und klarem UI für Recruiter und Teams.",
     description:
       "Persönliches Portfolio mit App Router, TypeScript und animierten UI-Komponenten für professionelle Präsentation.",
     role: "Full-Stack Entwicklung",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     id: "scoutx",
     title: "ScoutX",
-    summary: "TypeScript-Anwendung mit moderner Architektur und skalierbarer Codebasis.",
+    summary: "TypeScript-Web-App mit klarer Architektur und erweiterbarer Codebasis.",
     description:
       "Eigenes Softwareprojekt mit TypeScript-Stack, entwickelt für strukturierte Feature-Erweiterung und saubere Wartbarkeit.",
     role: "Frontend & Architektur",
@@ -72,19 +72,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/CapalotDaGreat/Taschenrechner",
     imageUrl: "/images/project-calculator.png",
     category: "tool",
-  },
-  {
-    id: "impostor-game",
-    title: "Impostor Game",
-    summary: "Interaktives Party-Spiel inspiriert vom populären Impostor-Format.",
-    description:
-      "Spielprojekt mit Fokus auf Spielmechanik, Nutzerinteraktion und unterhaltsame Multiplayer-Erfahrung.",
-    role: "Game Logic & UI",
-    stack: ["JavaScript", "HTML", "CSS"],
-    result: "Spielerisches Produkt mit klarer Spielschleife und einfachem Einstieg.",
-    githubUrl: "https://github.com/CapalotDaGreat/Impostor-game",
-    imageUrl: "/images/project-impostor.png",
-    category: "game",
   },
   {
     id: "todo-list",
@@ -133,6 +120,5 @@ export const featuredProjects = projects.filter((project) => project.featured);
 export const categoryLabels: Record<ProjectCategory, string> = {
   web: "Web Apps",
   tool: "Tools",
-  game: "Games",
   backend: "Backend",
 };

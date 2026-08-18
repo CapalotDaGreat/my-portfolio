@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Cadima Lusiola",
   },
   description:
-    "Portfolio von Cadima Lusiola mit modernen Web-Apps, klaren UI-Konzepten und echten GitHub-Projekten.",
+    "Portfolio von Cadima Lusiola – Junior Full-Stack Developer mit React, Next.js und TypeScript. Projekte, Tech Stack und direktes Kontaktformular für Recruiter.",
   keywords: [
     "Cadima Lusiola",
     "Full-Stack Developer",

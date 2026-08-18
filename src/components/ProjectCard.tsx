@@ -4,12 +4,11 @@ import { categoryLabels } from "../data/projects";
 
 type ProjectCardProps = {
   project: Project;
-  compact?: boolean;
 };
 
-export default function ProjectCard({ project, compact = false }: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className={`project-card ${compact ? "compact" : ""}`}>
+    <article className="project-card">
       <div className="project-image-wrap">
         <Image
           src={project.imageUrl}
@@ -25,20 +24,7 @@ export default function ProjectCard({ project, compact = false }: ProjectCardPro
       </div>
 
       <h3>{project.title}</h3>
-      <p>{compact ? project.summary : project.description}</p>
-
-      {!compact ? (
-        <>
-          <p className="project-result">
-            <strong>Ergebnis:</strong> {project.result}
-          </p>
-          <p className="project-role">
-            <strong>Rolle:</strong> {project.role}
-          </p>
-        </>
-      ) : (
-        <p className="project-result">{project.result}</p>
-      )}
+      <p>{project.summary}</p>
 
       <div className="chips">
         {project.stack.map((tech) => (
