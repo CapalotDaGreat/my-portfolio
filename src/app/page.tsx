@@ -98,7 +98,7 @@ export default function Home() {
               <span>Eigene Projekte</span>
             </div>
             <div className="stat-card">
-              <strong>3</strong>
+              <strong>2</strong>
               <span>Live Demos</span>
             </div>
             <div className="stat-card">
